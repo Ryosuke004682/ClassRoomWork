@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Nomal
   - Rare
+  - TimerItem
   layers:
   - Default
   - TransparentFX

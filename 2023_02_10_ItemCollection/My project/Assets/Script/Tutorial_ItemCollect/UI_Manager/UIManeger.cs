@@ -1,28 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManeger : MonoBehaviour
+namespace UI
 {
-    [SerializeField, Tooltip("スコアのTextを入れるとこ")]
-    public Text scoreText;
+    public class UIManeger : MonoBehaviour
+    {
+        [SerializeField]
+        private Text _text = null;
 
-    //**ゲームバランスのパラメーター**
-    [Header("ゲームバランス")]
-    [SerializeField, Tooltip("通常のポイントの配分(10点)")]
-    private int _scoreNomal = 0;//10pt
-
-    [SerializeField, Tooltip("レアのポイント配分(50点)")]
-    private int _scoreRear = 0;//50pt
-
-    //**UIの定義**
-    [Header("UI周りの設定")]
-    [SerializeField, Tooltip("時間のTextを入れるとこ")]
-    private Text timeText;
+        public int Score
+        {
+            get => _score;
+            
+            set
+            {
+                _score = value;
+                _text.text = value.ToString();
+            }
+        }
+        private int _score;
+    }
 }
 
-public class Score
-{
-
-}

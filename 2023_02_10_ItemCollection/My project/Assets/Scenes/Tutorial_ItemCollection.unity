@@ -676,7 +676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 63.1, y: 64.3}
+  m_AnchoredPosition: {x: 63.100098, y: 64.3}
   m_SizeDelta: {x: 98.3, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840945068
@@ -1413,7 +1413,8 @@ MonoBehaviour:
   timePuls: {fileID: 2112461375}
   N_Score: 10
   R_Score: 50
-  addTime: 10
+  addTime: 5
+  _speed: 2
 --- !u!54 &1471759036
 Rigidbody:
   m_ObjectHideFlags: 0

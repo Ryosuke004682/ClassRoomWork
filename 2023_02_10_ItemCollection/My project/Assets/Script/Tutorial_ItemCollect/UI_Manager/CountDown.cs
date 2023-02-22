@@ -9,7 +9,7 @@ public class CountDown : MonoBehaviour
     [SerializeField] Text timerText;
     [SerializeField] private double _timer = 0.0;
 
-    private bool isTimeUp;
+    bool isTimeUp;
 
     private void Update()
     {

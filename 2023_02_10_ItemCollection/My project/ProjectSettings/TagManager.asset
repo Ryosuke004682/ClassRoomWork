@@ -7,6 +7,8 @@ TagManager:
   - Nomal
   - Rare
   - TimerItem
+  - Ground
+  - SpawnObj
   layers:
   - Default
   - TransparentFX

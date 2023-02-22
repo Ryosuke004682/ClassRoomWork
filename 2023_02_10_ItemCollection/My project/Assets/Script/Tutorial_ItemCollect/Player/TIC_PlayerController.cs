@@ -16,21 +16,20 @@ public class TIC_PlayerController : MonoBehaviour
     private Rigidbody _rb;
 
     [Header("アイテムを取得した時に加算されるポイント")]
-    [SerializeField,Header("ノーマル")]
-    private int N_Score = 0;//10pt
+    [Space]
+    [SerializeField,Header("ノーマル")]  private int N_Score = 0;//10pt
+    [SerializeField, Header("レア")]     private int R_Score = 0;//50Pt
+    [SerializeField, Header("時間加算")] private double addTime = 10;
 
-    [SerializeField, Header("レア")]
-    private int R_Score = 0;//50Pt
-
-    [SerializeField, Header("時間のアイテムを取った時に加算される時間")]
-    private double addTime = 10;
+    [Header("ボールの動くスピード")]
+    [Space]
+    [SerializeField, Header("スピード")] private float _speed;
 
     Vector3 firstPosition = Vector3.down;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
-       
     }
 
     private void Update()
@@ -38,7 +37,9 @@ public class TIC_PlayerController : MonoBehaviour
         var horizontal = Input.GetAxis("Horizontal");
         var vertical   = Input.GetAxis("Vertical");
 
-        _rb.AddForce(horizontal,0,vertical);
+        var velocity = new Vector3(horizontal , 0 , vertical).normalized;
+
+        _rb.AddForce(velocity * _speed , ForceMode.Acceleration);
 
         Reset();
     }

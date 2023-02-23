@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class DestroyObj : MonoBehaviour
 {
+    //**’n–Ê‚É—‚¿‚½‚çÁ‚¦‚éˆ—**
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             Debug.Log("Test1_OK");
             StartCoroutine(IDestoryObj());
-
-           
         }
     }
 

@@ -216,7 +216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 244149948830338896, guid: 734b097a5222af04295f79a71a4dce46, type: 3}
       propertyPath: _interval
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 244149948830338897, guid: 734b097a5222af04295f79a71a4dce46, type: 3}
       propertyPath: m_Name
@@ -277,7 +277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 244149948830338896, guid: 734b097a5222af04295f79a71a4dce46, type: 3}
       propertyPath: _interval
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 244149948830338897, guid: 734b097a5222af04295f79a71a4dce46, type: 3}
       propertyPath: m_Name
@@ -435,7 +435,6 @@ GameObject:
   - component: {fileID: 1766349452}
   - component: {fileID: 1766349451}
   - component: {fileID: 1766349450}
-  - component: {fileID: 1766349454}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Ground
@@ -521,18 +520,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1766349454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766349449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344edd1611e95e4d804945b397df610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &244149949564313905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,7 +529,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 244149948830338896, guid: 734b097a5222af04295f79a71a4dce46, type: 3}
       propertyPath: _interval
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 244149948830338897, guid: 734b097a5222af04295f79a71a4dce46, type: 3}
       propertyPath: m_Name

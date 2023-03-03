@@ -7,9 +7,14 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField,Header("生成スピード")] private float _interval = 1;
 
-    [SerializeField] private float _spawnTime { get; set; } = 1;
+    [SerializeField] private float _spawnTime { get; set; }
 
     [SerializeField] public GameObject[] _original;
+
+    [SerializeField] private int _maxSpawnCount;
+
+
+    DestroyObj _destroy;
 
     private void Update()
     {
@@ -21,16 +26,27 @@ public class Spawner : MonoBehaviour
 
             var randomValue = Random.Range(0 , _original.Length);
 
-            var item = Instantiate(_original[randomValue] , transform.position , Quaternion.identity);
+            //Debug.Log(item);
 
-          
+            for(var i = 0; i <= _maxSpawnCount; i++)
+            {
+                var item = Instantiate(_original[randomValue], transform.position, Quaternion.identity);
+
                 var rb = item.GetComponent<Rigidbody>();
                 var x = Random.Range(-5, 5);
                 var y = Random.Range(3, 7);
                 var z = Random.Range(-5, 5);
 
                 rb.AddForce(x, y, z, ForceMode.Impulse);
-          
+
+                Debug.Log("Destory前のi" + i);
+              
+                if(!_destroy)
+                {
+                    Debug.Log("Destory後のi" + i);
+                    i--;
+                }
+            }
         }
     }
 
@@ -38,4 +54,6 @@ public class Spawner : MonoBehaviour
     {
 
     }
+
+
 }
